@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <title> Colorblind Picker </title>
+     <!-- grabbing things from the css and javascript-->
+     <!-- no stylesheet or body onload for the colorblind settings-->
+     <script src="script.js"></script>
+     
+     <!-- the probably only time i use a div, i never really used them but i find it useful for making a navbar, they're supposed to be next to eachother anyways-->
+     <div class="navbar">
+        <button class="button" onclick="window.location.href='index.html';">              Back to Morbius </button>
+        <button class="button" onclick="window.location.href='Morbius Credits.html';">    Morbius Credits </button>
+        <button class="button" onclick="window.location.href='WhyMorbius.html';">         Why Morbius </button>
+        <button class="button" onclick="window.location.href='ColorBlind.html';">         Accesibility settings </button>
+        <button class="button" onclick="roll()">                                          Free Morbius merch</button>
+
+
+     </div>
+
+    <head> 
+        <h1> Colorblind Picker </h1>
+        <h2> usable for everyone not just colorblind people </h2>
+    
+    </head>
+    <body>
+        <p> This page is used to let people change the color of the background and text </p>
+        <p> this page also resets in color whenever it is visited, but the other sites will not reset</p>
+    
+        <input type="color" class="colorpicker" id="textColor" >
+        <label for="textColor" id="text"> Text color </label>
+        <button onclick="textColor()"> Change</button>
+        <br> <br>
+        <span> Color code for text color: </span>
+        <span id="TextColorCode"> </span>
+        <br> <br>
+
+        <input type="color"  id="backgroundcolor" class="colorpicker">
+        <label for="backgroundcolor"> Background color</label>
+        <button onclick="backgroundcolor()">Change</button>
+        <br> <br>
+        <span> Color code for background color: </span>
+        <span id="BackgroundColorCode"> </span>
+        <br> <br>
+
+       <p class="test"> this is text to see how it looks</p>
+       <p class="test"> let me know if it works or you like it</p>
+    </body>
+    </html>

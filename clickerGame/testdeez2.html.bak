@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<title> Cookie Clicker but bad </title>
+<head>
+<meta charset="utf-8"?
+
+</head>
+<body>
+this could be a button
+<p> <img src= "cookie.png" id="cookieImage" onclick="Button()">  </img></p>
+<p id="alertMoment2">  <button onclick="alertMoment()"> AlertMoment</button> </p>
+
+ <table>
+  <tr>
+    <th>Item</th>
+    <th>Cost</th>
+    <th>Increase</th>
+	<th>Amount</th>
+  <tbody>
+  </tr>   
+  <tr>
+    <td> <button onclick ="cps1()"> Grammy </button> </td>
+    <td> <span id="costGrammy"> </span> </td>
+    <td> <span id="grammyCps"> </span> cps </td>
+	<td> <span id="grammyAmount"> </span> </td>
+  </tr>
+  <tr>
+    <td> <button onclick ="cps10()"> Borot </button> </td>
+    <td> <span id="costBorot"> </span> </td>
+    <td> <span id="borotCps"> </span> cps </td>
+	<td> <span id="borotAmount"> </span> </td>
+  </tr> 
+  </tbody>
+  </table>  
+<p> number? <span id="number":></span></p>
+<p> cps?! <span id="cps"></span></p>
+<p> maybe one day there will be a button under me </p>
+
+<script>
+
+//declaring variables
+let number = 1;
+let x = 1;
+let costGrammy = 20;
+let grammyAmount = 0;
+let costBorot = 100;
+let grammyCps = 1;
+let borotCps = 10;
+let borotAmount = 0;
+let numberdeath = 0;
+let grannyUpgrade = 0;
+let normal = 0;
+let cps = 0;
+let hasGolden = false; 
+let hasGrammy = false; 
+let goodEnding = false;
+let darkCookie = false; 
+let darkFirst = true;
+let hasGoldCookie = false;
+
+let goldCookieButton = document.createElement("button");
+goldCookieButton.innerHTML = "make da golden cookie and make it to cookie heaven for 9999 number";
+let darkCookieButton = document.createElement("button");
+darkCookieButton = "free me from my cookie tomb";
+
+
+
+
+
+
+//grammy upgrade button 
+let grammyButton  = document.createElement("button");
+grammyButton.innerHTML = "make your grammy's decent 1250 number";
+grammyButton.onclick = function(){
+if(number >= 1250){
+grammyCps = grammyCps * 2;
+cps = cps + grammyAmount; 
+document.getElementById("cps").innerHTML = cps;
+document.getElementById("grammyCps").innerHTML = grammyCps;
+hasGrammy = true;
+grammyButton.parentNode.removeChild(grammyButton); 
+    }
+	else if (numberdeath == 0){
+	  alert("you should know you can't do that by now");
+	  numberdeath = numberdeath + 1;
+	  }
+	 else if (numberdeath == 1){
+	 alert("I said stop it, you don't have enough");
+	 numberdeath = numberdeath + 1;
+	 }
+	 else if(numberdeath == 2){
+	 alert("seriously, one more time and i'll rain numberdeath upon you");
+	 numberdeath = numberdeath + 1;
+	 } 
+	 else if(numberdeath == 3){
+	 alert("I warned you, now your time has come");
+	 numberdeath = 10;
+	 document.body.style.background = "#696969";
+	 grammyButton.parentNode.removeChild(grammyButton);  
+	 document.getElementById("cookieImage").src="darkCookie.png";
+	 grammyAmount = -69;
+	 document.getElementById("grammyAmount").innerHTML = grammyAmount; 
+	 }
+}
+
+   
+
+
+
+
+//letting html see variables
+document.getElementById("number").innerHTML = number;
+document.getElementById("costGrammy").innerHTML = costGrammy;
+document.getElementById("costBorot").innerHTML = costBorot;
+document.getElementById("grammyCps").innerHTML = grammyCps;
+document.getElementById("borotCps").innerHTML = borotCps;
+
+//gold cookie button that's surprisingly far up in my code
+
+ goldCookieButton.onclick = function goldCookie(){ 
+   
+      if(number >= 9999){
+   document.getElementById("cookieImage").src="goldenCookie.png";
+   x = 2;
+   cps = cps + 10;
+   number = number - 9999;
+   hasGolden = true;
+   document.body.style.color = "yellow";
+     var p = document.getElementById("gold");
+      goldCookieButton.parentNode.removeChild(goldCookieButton); 
+   document.getElementById("cps").innerHTML = cps;
+   }
+//dark cookie option
+   else if(number <= -200){
+   alert("you darest forsake golden cookie!?")
+   document.getElementById("cookieImage").src="darkCookie.png";
+   x = x - 6;
+   cps = - 10;
+  
+   document.body.style.color = "red";
+    darkCookie = true;
+	  number = 0;
+	
+	  grammyCps = grammyCps * -1;
+	  grammyAmount = grammyAmount * -1;
+	document.getElementById("number").innerHTML = number;
+    document.getElementById("grammyCps").innerHTML = grammyCps;
+    document.getElementById("costGrammy").innerHTML = costGrammy;
+	document.getElementById("grammyAmount").innerHTML = grammyAmount;
+	  
+     
+	  borotCps = borotCps * -1;
+	  borotAmount = grammyAmount * -1;
+	document.getElementById("number").innerHTML = number;
+    document.getElementById("borotCps").innerHTML = borotCps;
+    document.getElementById("costBorot").innerHTML = costBorot;
+	document.getElementById("borotAmount").innerHTML = borotAmount;
+	
+	 goldCookieButton.parentNode.removeChild(goldCookieButton); 
+   document.getElementById("cps").innerHTML = cps;
+   document.body.style.background = "#696969";
+	
+   }
+   else{
+     alert("come back when you have enough smooth skin");
+	 }
+}
+  
+
+//cookie button
+function Button(){
+    number = number + x;
+    document.getElementById("number").innerHTML = number;
+}
+
+//AlertMoment button
+function alertMoment(){
+    alert("your number is mine you fool");
+    number = 0;
+    cps = cps - 5;
+    document.getElementById("number").innerHTML = number;
+    document.getElementById("cps").innerHTML = cps;
+    var removeAlert = document.getElementById("alertMoment2");
+	removeAlert.parentNode.removeChild(removeAlert); 
+
+}
+
+//Grammy method
+function cps1(){
+      	
+	if(number >= costGrammy || darkCookie == true){
+     cps = cps + grammyCps;
+     number = number - costGrammy;
+     costGrammy = costGrammy * 1.15;
+     costGrammy = Math.round(costGrammy);
+	 grammyAmount = grammyAmount + 1;
+	  if(darkCookie == true ){
+	    grammyAmount = grammyAmount - 2;
+		 } 
+    
+    } else{
+         alert("you wish big man");
+          }
+    document.getElementById("number").innerHTML = number;
+    document.getElementById("cps").innerHTML = cps;
+    document.getElementById("costGrammy").innerHTML = costGrammy;
+	document.getElementById("grammyAmount").innerHTML = grammyAmount;
+}
+	
+//Borot method (same stuff different button)
+function cps10(){
+    if(number >= costBorot || darkCookie == true){
+     cps = cps + borotCps;
+     number = number - costBorot;
+     costBorot = costBorot * 1.15;
+     costBorot = Math.round(costBorot);
+	 borotAmount = borotAmount + 1;
+	         if(darkCookie == true ){
+	    borotAmount = borotAmount - 2;
+		 } 
+	 
+    } else{
+         alert("you wish big man");
+          }
+    document.getElementById("number").innerHTML = number;
+    document.getElementById("cps").innerHTML = cps;
+    document.getElementById("costBorot").innerHTML = costBorot;
+	document.getElementById("borotAmount").innerHTML = borotAmount; 
+}
+
+//setting cps to actually go up
+setInterval(function () {
+number = number + cps;
+document.getElementById("number").innerHTML = number;
+   
+}, 1000);
+
+//interval to check for things/create endings
+setInterval(function grammyUpgrade(){
+
+
+//grammy upgrade 
+if(grammyAmount == 7 && grannyUpgrade == 0){
+     document.body.appendChild(grammyButton);
+	 grannyUpgrade = 1;
+	 }
+	 
+//the beginning of the bad ending
+if(number < -100 && numberdeath == 0){
+alert("not fighting it? yesss, please continue");
+x = -1;
+numberdeath = 4;
+}
+if(numberdeath == 5){
+document.body.appendChild(goldCookieButton);
+numberdeath = 6; 
+}
+if(number < -250 && numberdeath == 4){
+alert("CLICK THE BUTTON AND GIVE ME CONTROL");
+goldCookieButton.innerHTML = "GIVE ME THE CONTROL";
+document.body.appendChild(goldCookieButton); 
+
+
+numberdeath = 5;
+}
+//number death (maybe bad ending one day) 
+if(numberdeath == 10){
+
+ number = number - 31777;
+ document.getElementById("number").innerHTML = number;
+ cps = cps - 31777;
+ document.getElementById("cps").innerHTML = cps;
+ document.body.style.color = "red";
+    } 
+//good ending
+if(goodEnding == true){
+number = number + 31777;
+cps = cps + 31777;
+document.getElementById("number").innerHTML = number;
+document.getElementById("cps").innerHTML = cps;
+document.body.style.background = "#6495ED"; 
+}
+if(hasGolden == true && hasGrammy == true && goodEnding == false){
+alert("Your grind has payed off and you've made it to number heaven")
+goodEnding = true;
+    }
+//if bad ending people try to get into the positive number 
+if(darkCookie == true && number >= 1000) {
+alert("too late for number to go up, your course is set");
+alert("FINALLY, I HAVE THE STRENGTH TO DESTROY THE COOKIE!");
+document.getElementById("cookieImage").src="crackedCookie.png";
+numberdeath = 10;
+
+
+number = 0;
+} 
+
+if(hasGrammy == true && hasGolden == false){	
+	  document.body.appendChild(goldCookieButton);
+	  }  
+//me trying to get bad ending
+
+if(number < -15000 && numberdeath < 10){
+alert("FINALLY, I HAVE THE STRENGTH TO DESTROY THE  COOKIE!")
+document.getElementById("cookieImage").src="crackedCookie.png";
+numberdeath = 10;
+}
+
+}, 10);
+
+//the end of the javascript
+  </script>
+  <style>
+  </body>
+</html>
