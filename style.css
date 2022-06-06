@@ -32,3 +32,18 @@ body{
   float:left;
   text-align:center;
 }
+.question{
+  font-weight:bold;
+  float:left;
+  color:coral;
+  width:222px;
+  height:auto;
+
+}
+.answer{
+  margin-left:225px;
+}
+.wholepage{
+  width:100%;
+  height:auto;
+}
