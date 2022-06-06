@@ -1,73 +1,49 @@
-/*  Giving the whole page a font  */
-* {
-    font-family: 'Courier New';
-    font-weight: bold;
-   
+
+body{
+    background:#1ba11a url(HOME2.png) top left repeat;
+   color:white;
 }
 
-
-/* nav bar/button alignment */
-
-.navbar{
-    text-align:center;
-}
 .button{
- background-color:#182028;
- color:white;
- width: 120px;
- height: 55px;   
- vertical-align: top;
- text-align: center;
-}
-
-/* me messing around with text shadow for the headers */
+    background-color: darkslategray;
+    color:white;
+    width: 120px;
+    height: 55px;   
+    vertical-align: top;
+    text-align: center;
+   }
+   .button:hover, .dropbtn:focus {
+    background-color: #2980B9;
+  }
   
-.header {
-      color: blue; 
-      font-family: 'comic sans';
-      text-shadow: 4px 4px #1c9b1e; 
-      text-align: center; 
-} 
-
-/* changing default background color (can be changed through colorblind settings */
-body {
-    background-color: blueviolet;
+.center{
+    text-align:center;
+    color:grey;
+    
 }
-
-/* making the iframe/credits have a nice border/format */
-.iframe-container{
-    border-color: white;
-    border-width:2px;
-    float:right;
-    margin:30px;
+.empire{
+  float:left;
+  border-style: solid;
+  border-width:6px;
+  border-color:blue;
 
 }
-.credits{
-    float:left;
-    border-style: solid;
-    border-width:6px;
-    border-color:brown;
-  
+.test{
+  float:left;
+  text-align:center;
 }
+.question{
+  font-weight:bold;
+  float:left;
+  color:coral;
+  width:222px;
+  height:auto;
 
-/* floating the text next to the credits (should change with smaller screens) */
-.bruh{
-    margin-right:300px;
-    text-align:right;
 }
-
-/* Media Query(for the smaller screens)*/
-@media only screen and (max-width: 828px)
-{
-    body{
-        background-color: olive;
-    }
-    .button{
-        width: 1100px;
-        text-align:left;
-
-    }
-    .credits{
-        float:none;
-    }
+.answer{
+  margin-left:225px;
+}
+.wholepage{
+  width:100%;
+  height:auto;
 }

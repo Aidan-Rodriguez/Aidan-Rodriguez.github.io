@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <!-- grabbing things from the css and javascript-->
+    <body onload="changeColor()"> 
+    <link rel ="stylesheet"  href="style.css"> 
+    <script src="script.js"></script>
+
+    <head>
+      <title>Meet The Empires </title>
+      <div class="top"> <div class="center">
+          <button class="button" onclick="window.location.href='index.html';">              Home </button>
+          <button class="button" onclick="window.location.href='meetTheEmpires.html';">     Meet the empires </button>
+          <button class="button" onclick="window.location.href='WhyMorbius.html';">         Why Morbius     </button>
+          <button class="button" onclick="window.location.href='ColorBlind.html';">         Accesibility settings </button>
+          <button class="button" onclick="roll()">                                          Free Morbius merch</button>
+          <br>
+          <h1> Meet The Empires </h1>     
+          
+          </div> </div>  
+    </head>
+    
+      <h2   class="federationTitle"> The Federation </h1>     
+      <img  class="federation" src="Federation2.png" alt="Federation logo"/>
+      <span class="federationDesc">
+      The Federation is a unified collection of planets and species, meant to allow for easy trade and peace among worlds. some notable species 
+      in the federation include Humans, Vulcans, and Bolians. The Emblem is based on the UN emblem from earth, The olive branches signify peace
+      and the stars in the center signify expoloration and the members within the federation. It's also worth noting that federation vessels are
+      prohibited from using cloaking devices.
+      </span>
+
+     <h2   class="klingonTitle">The Klingon Empire</h2>
+     <img  class="klingon" src="Klingon.png" alt="klingon empire logo">
+     <span class="klingonDesc"> 
+     The klingon empire is a feudal militaristic empire. Klingons are known for having a great sense of honor, and find the most honerable thing 
+     to do is to give their life up for the empire. The klingons used to be subjugated by the Hur'q which were thought of as gods. Later the Klingons
+     killed their gods and gained their freedom.In the klingon empire race means a lot and they won't hesistate to attack you for accidently venturing 
+     into their space. </span>
+
+     <h2   class=" dominionTitle">  The Dominion</h2>
+     <img  class="dominion" src="Dominion.png" alt="Dominion logo">
+     <span class="dominionDesc"> 
+     The Dominion is debatably the strongest empire and is the only empire located within the gamma quadrant. We only know of the dominion through a 
+     wormhole near Bajor. The dominion are lead by The Founders which are a race also known as Changelings. They are thought of as gods by the Vorta
+     and Jemm Haddar which are thought to be genetically engineerd by the founders to help better run the Dominion. 
+     </span>
+
+     <h2   class="ferengiTitle">  The Ferengi</h2> 
+     <img  class="ferengi" src="Ferengi.png" alt="Ferengi Logo">
+     <span class="ferengiDesc">
+     The Ferengi Alliance is known to be the largest traders in the universe. It's hard to get anything without it either being form a ferengi or traded
+     through a Ferengi. Since birth Ferengi are taught how to run a business, they're even given a set of rules called "the rules of acquisition"  which 
+     are meant to give a Ferengi "the lobes of business". Ferengi are known to do anything to get a little extra latinum, even betray others.
+     </span>
+
+     <h2   class="cardassiaTitle"> The Cardassian Union </h2>
+     <img  class="cardassian" src="Cardassia.png" alto="Cardassian logo">
+     <span class="cardassiaDesc">
+     The Cardassian Union used to be known for it's art and culture but in recent years more for it's military. After an economic collapse the military took
+     over. The Cardassian Union is also known for it's secret service known as "The Obsidian Order". Cardassia continues to struggle after being put in the 
+     middle of the Dominion War.
+     </span>
+     
+
+</html>
+<style>
+ body{
+   display:grid;
+   grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;  /*     12 rows           */
+   grid-template-rows:    1fr, 1fr, ;                                                  /*     2 columns        */
+ }
+ .top{
+ grid-row: 1;
+ grid-column: 1 / 10;
+ font-size: 30px;
+}
+
+
+.federationTitle{
+  grid-column :1 / 10;
+  grid-row    :2;
+  text-align:center;
+  color:coral;
+ 
+  font-size: 40px;
+}
+ .federation{
+   grid-column :1;
+   grid-row    :3;
+   
+
+ }
+.federationDesc{
+  grid-column : 2;
+  grid-row    : 3;
+  color:mediumseagreen;
+}
+
+
+.klingonTitle{
+  grid-row    : 5;
+  grid-column : 1 / 5;
+  text-align:center;
+  color:coral;
+  font-size: 40px;
+}
+.klingon{
+  grid-row:6;
+  grid-column:1;
+ 
+  height:227px;
+  width: 222px;
+}
+.klingonDesc{
+  grid-row:6;
+  grid-column:2;
+  color:mediumseagreen;
+
+}
+
+
+.dominionTitle{
+  grid-row: 7;
+  grid-column:1 / 5;
+  text-align:center;
+  color:coral;
+  font-size: 40px;
+}
+.dominion{
+  grid-row:8;
+  grid-column:1;
+  height:227px;
+  width:222px;
+  
+}
+.dominionDesc{
+  grid-row:8;
+  grid-column:2;
+  color:mediumseagreen;
+}
+
+
+.ferengiTitle{
+  grid-row: 9;
+  grid-column:1 / 5;
+  text-align:center;
+  color:coral;
+  font-size: 40px;
+}
+.ferengi{
+  grid-row:10;
+  grid-column: 1;
+  height:227px;
+  width:222px;
+  
+}
+.ferengiDesc{
+  grid-row:10;
+  grid-column:2;
+  color:mediumseagreen;
+}
+
+
+.cardassiaTitle{
+  grid-row: 11;
+  grid-column:1 / 5;
+  text-align:center;
+  color:coral;
+  font-size: 40px;
+}
+.cardassian{
+  grid-row:12;
+  grid-column:1;
+  height:227px;
+  width:222px;
+}
+.cardassiaDesc{
+  grid-row:12;
+  grid-column:2;
+  color:mediumseagreen;
+}
+
+
+</style>

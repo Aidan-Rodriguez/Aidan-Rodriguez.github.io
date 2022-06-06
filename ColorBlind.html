@@ -2,8 +2,10 @@
 <html>
     <title> Colorblind Picker </title>
      <!-- grabbing things from the css and javascript-->
-     <!-- no stylesheet or body onload for the colorblind settings-->
+     <!-- no body onload for the colorblind settings-->
+     <link rel ="stylesheet"  href="style.css"> 
      <script src="script.js"></script>
+     
      
      <!-- the probably only time i use a div, i never really used them but i find it useful for making a navbar, they're supposed to be next to eachother anyways-->
      <div class="navbar">
@@ -27,7 +29,7 @@
     
         <input type="color" class="colorpicker" id="textColor" >
         <label for="textColor" id="text"> Text color </label>
-        <button onclick="textColor()"> Change</button>
+        <button onclick="textColor()"> Change</button>  <button id="reset" onclick="resetTextColor()"> Reset text color </button>
         <br> <br>
         <span> Color code for text color: </span>
         <span id="TextColorCode"> </span>
@@ -35,13 +37,37 @@
 
         <input type="color"  id="backgroundcolor" class="colorpicker">
         <label for="backgroundcolor"> Background color</label>
-        <button onclick="backgroundColor()">Change</button>
-        <br> <br>
+        <button onclick="backgroundColor()">Change</button>    <button id="reset" onclick="resetBackgroundColor()"> Reset background color </button>
+        <br><br>
         <span> Color code for background color: </span>
         <span id="BackgroundColorCode"> </span>
         <br> <br>
 
+       
+       
+
        <p class="test"> this is text to see how it looks</p>
        <p class="test"> let me know if it works or you like it</p>
     </body>
+    <br>
+    <br>
+    <br>
+    <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+    <footer>
+        
+        <p> copyright 2022 by <em>MorbiusFanClubIndustries™®</em> </p>
+     </footer>
+
+  
+     
     </html>
