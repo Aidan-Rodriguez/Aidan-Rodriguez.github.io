@@ -39,3 +39,7 @@ function resetBackgroundColor(){
     document.body.style.background =  null;
     sessionStorage.setItem("backgroundcolor", null);
 }
+function scam(){
+    window.open('ad.html','popupad','width=500 height=450');
+
+}
